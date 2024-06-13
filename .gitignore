@@ -154,6 +154,18 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Django stuff:
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+node_modules/
+
+# Django migrations
+*/migrations/*
+
+
+
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
 #  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
