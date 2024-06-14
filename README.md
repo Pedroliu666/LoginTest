@@ -61,7 +61,15 @@ npm run build
 
 This will create a `build` directory containing the static files that will be served by Django.
 
-### 4. Run the Server
+### 4. Create dataabse
+
+Run the following command to apply the databse migrations:
+
+```bash
+python manage.py migrate
+```
+
+### 5. Run the Server
 
 Go back to the root directory of the project and run the Django server:
 
@@ -72,7 +80,7 @@ python manage.py runserver
 
 The server should now be running at `http://localhost:8000/`.
 
-### 5. Run Tests
+### 6. Run Tests
 
 To run the tests, use `pytest`. Ensure you are in the root directory of the project where `pytest.ini` is located:
 
@@ -80,7 +88,7 @@ To run the tests, use `pytest`. Ensure you are in the root directory of the proj
 pytest
 ```
 
-### 6. Clean Up dataabse
+### 7. Clean Up dataabse
 
 To clean up the databse, go to the root directory of the project and run the following command
 
