@@ -24,7 +24,6 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("users.urls")),  # API endpoints
-    
     # Serve React's index.html for all other routes
     re_path(r"^(?!api/).*$", TemplateView.as_view(template_name="index.html")),
 ]
