@@ -33,14 +33,7 @@ const Register = () => {
             }
         } catch (error)
         {
-            if (error.response)
-            {
-                setMessage(`Registration failed: ${JSON.stringify(error.response.data)}`);
-            } else if (error.request) {
-                setMessage('Registration failed: No response received from the server.');
-            } else {
-                setMessage('Registration failed: ' + error.message);
-            }
+            setMessage('Registration failed' + error.message);
         }
     };
 

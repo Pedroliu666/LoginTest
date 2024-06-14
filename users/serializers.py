@@ -12,6 +12,9 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ["username", "password", "email"]
 
     def validate_username(self, value):
+        if User.objects.filter(username=value).exists():
+            raise serializers.ValidationError("This username is already taken.")
+        
         if not value.strip():
             raise serializers.ValidationError("Username cannot be empty.")
         return value
